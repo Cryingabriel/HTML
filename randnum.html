@@ -6,6 +6,42 @@
 <!##########################################################################>
     <!-- CSS: Styles for the webpage -->
     <style>
+        @keyframes Move-words {
+            0% {
+                left: 100%;
+            }
+            100%{
+                left: -100%;
+            }
+        }
+        @keyframes rainbow {
+            0% {
+                background-color: #ff0000;
+            } 
+            20% {
+                background-color: #ffff00;
+            } 
+            40% {
+                background-color: #00ff00;
+            } 
+            60% {
+                background-color: #00ffff;
+            } 
+            80% {
+                background-color: #0000ff;
+            } 
+            100% {
+                background-color: #ff00ff;
+            }
+        }
+        body {
+            animation: infinite .1s rainbow;
+        }
+        /* h1 {
+            animation: alternate 2s Move-words;
+        } */
+    </style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
