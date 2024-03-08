@@ -24,10 +24,10 @@
     <!-- HTML: Structure and content of the webpage -->
 
     <h2>Guess the Number Game</h2>
-    <p>I'm thinking of a number between 1 and 50. Can you guess it?</p>
+    <p>I'm thinking of a number between 1 and 100. Can you guess it?</p>
 
     <!-- Input field for the guess -->
-    <input type="number" id="guess" min="1" max="50">
+    <input type="number" id="guess" min="1" max="100">
     <button onclick="checkGuess()">Guess</button>
 
     <!-- Paragraph where the result will be displayed -->
@@ -49,10 +49,11 @@
             // Compare the guess to the secret number
             if (userGuess == secretNumber) {
                 document.getElementById('result').innerText = 'Congratulations! You guessed it!';
+            } else if (userGuess >= secretNumber-5 && userGuess <= secretNumber+5){
+                document.getElementById('result').innerText = 'youre really close';
             } else if (userGuess < secretNumber) {
                 document.getElementById('result').innerText = 'Too low. Try again!';
-            } else if userGuess
-            else {
+            } else {
                 document.getElementById('result').innerText = 'Too high. Try again!';
             }
         }
